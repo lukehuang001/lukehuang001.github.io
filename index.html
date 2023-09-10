@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
- <head>
-   <title>Luke Huang's Portfolio</title>
-   <link rel="stylesheet" href="css/styles.css">
- </head>
- <body>
-   <nav>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luke's Portfolio</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <nav>
      <ul>
        <li><a href="index.html">Home</a></li>
        <li><a href="creativePortfolio.html">Creative Portfolio</a></li>
@@ -13,27 +18,42 @@
        <li><a href="resume.html">Resume</a></li>
      </ul>
    </nav>
-   <div class=”container”>
-     <div class=”blurb”>
-       <h1>Hi, I am Luke Huang!</h1>
-       <p>This is my first page for my personal website!</a></p>
-     </div>
-   </div>
 
-   <div class="category-slider">
-        <!-- Sample Category Card -->
-        <div class="category-card">
-            <img src="sample-image.jpg" alt="Category Image">
-            <h2>Category Title</h2>
-            <p>Short category description.</p>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Sample Slide -->
+            <div class="swiper-slide">
+                <img src="sample-image.jpg" alt="Category Image">
+                <h2>Category Title</h2>
+                <p>Short category description.</p>
+            </div>
+            <!-- Repeat for more slides -->
         </div>
-        <!-- Repeat similar blocks for more categories. -->
-   </div>
-  
-   <footer>
-   <ul>
-     <li><a href=”mailto:lukehuang001@gmail.com”>lukehuang001@gmail.com</a></li>
-   </ul>
-   </footer>
- </body>
+        
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Luke Huang</p>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            loop: true,
+            slidesPerView: 3, // Adjust based on how many slides you want to show at once.
+            spaceBetween: 30,
+
+            // Pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+</body>
 </html>
